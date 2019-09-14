@@ -1,21 +1,21 @@
 package com.api.ArtValue.Model;
 
-import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Table
 public class Cart {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id")
     private Long id;
- //   private User user;
-//    private List<Product> products;
+
+    @OneToOne
+    @MapsId
+    private User user;
+
+//  private List<Product> products;
     private Long total;
 
 }
