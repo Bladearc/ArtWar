@@ -1,4 +1,7 @@
 package com.api.ArtValue.Model;
 
-public class Role {
+
+
+public enum  Role {
+    USER,ADMIN,ARTIST
 }
